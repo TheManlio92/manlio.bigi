@@ -1,0 +1,123 @@
+body {
+    background-color: #f1f1f1;
+  }
+  
+  .nav-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute; /* Cambia la posizione da "fixed" a "absolute" */
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 10px 20px;
+    background-color: purple;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+  }
+    
+  .nav-link:hover {
+    background-color: #8b008b;
+    transform: translate(-50%, 0) scale(1.2);
+  }
+    
+  .title {
+    text-align: center;
+    color: purple;
+    font-size: 24px;
+    margin-top: 100px; 
+  }
+
+  #gallery {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+    height: 50vh; /* Imposta l'altezza della galleria su 100% dell'altezza della viewport */
+  }
+  
+  .image {
+    display: none; /* Nasconde tutte le immagini dell'anteprima */
+  }
+  
+  .image:first-child {
+    display: block; /* Mostra solo la prima immagine dell'anteprima */
+    width: 250px; /* Aumenta la larghezza della prima anteprima dell'immagine */
+    height: 250px; /* Aumenta l'altezza della prima anteprima dell'immagine */
+    object-fit: cover;
+    margin-right: 10px;
+    cursor: pointer;
+  }
+  
+  #overlay {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+  }
+  
+  #expanded-image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
+  
+  #expanded-image {
+    display: block;
+    max-width: 90%;
+    max-height: 90%;
+    margin: 0 auto;
+  }
+  
+  .arrow {
+    color: #fff;
+    font-size: 50px;
+    font-weight: bold;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    transition: color 0.3s;
+  }
+  
+  .arrow:hover {
+    color: #555;
+  }
+  
+  .close {
+    color: #fff;
+    font-size: 35px;
+    font-weight: bold;
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    cursor: pointer;
+    transition: color 0.3s;
+  }
+  
+  .close:hover {
+    color: #555;
+  }
+  
+  #left-arrow {
+    left: 10px;
+  }
+  
+  #right-arrow {
+    right: 10px;
+  }
+  
